@@ -49,8 +49,8 @@ body {
     position: absolute;
     top: -3vh;
     bottom: -3vh;
-    left: -3vw;
-    right: -3vw;
+    left: -3.5vw;
+    right: -3.5vw;
     background-size: cover;
     background-position: center;
     display: flex;
