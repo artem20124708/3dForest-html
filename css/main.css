@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --index: (calc(1vw + 1vh));
+    --transition: 2s cubic-bezier(.05, .5, 0, 1);
+}
+
+@font-face {
+    font-family: kamerik-3d;
+    src: url(../fonts/kamerik205-heavy.woff2);
+    font-weight: 900;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: kamerik-3d;
+}
+
+.logo {
+    filter: invert(1);
+    height: calc(var(--index) * 6);
+    width: calc(var(--index) * 6);
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%);
+    z-index: 1;
+}
+
+.layers {
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.layers__container {
+    height: 100vh;
+    transform-style: preserve-3d;
+    transform: rotateY(var(--move-x)) rotateX(var(--move-y));
+    min-height: 500px;
+    transition: transform var(--transition);
+}
+
+.layers__item {
+    position: absolute;
+    top: -2vh;
+    bottom: -2vh;
+    left: -2vw;
+    right: -2vw;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layer-1 {
+    transform: translateZ(-50px) scale(1.06);
+}
+
+.layer-2 {
+    transform: translateZ(120px);
+}
+ 
+.layer-3 {
+    transform: translateZ(100px) scale(.88);
+}
+ 
+.layer-4 {
+    transform: translateZ(180px) scale(.88);
+}
+ 
+.layer-5 {
+    transform: translateZ(190px) scale(.8);
+}
+ 
+.layer-6 {
+    transform: translateZ(250px) scale(.88);
+}
+ 
+.layer-7 {
+    transform: translateZ(300px) scale(.88);
+}
+ 
+.layer-8 {
+    transform: translateZ(400px) scale(8);
+}
+ 
+.hero-content {
+    font-size: calc(var(--index) * 2);
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.35em;;
+    letter-spacing: calc(var(--index) * -.1);
+}
+
+.hero-content span {
+    display: block;
+}
+
+.temik {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.temik:hover {
+    color: RGBA(61, 165, 255, 1.00);
+}
+
+.layer-8, .layer-7 {
+    pointer-events: none;
+}
