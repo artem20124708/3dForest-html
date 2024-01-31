@@ -47,10 +47,10 @@ body {
 
 .layers__item {
     position: absolute;
-    top: -2vh;
-    bottom: -2vh;
-    left: -2vw;
-    right: -2vw;
+    top: -3vh;
+    bottom: -3vh;
+    left: -3vw;
+    right: -3vw;
     background-size: cover;
     background-position: center;
     display: flex;
